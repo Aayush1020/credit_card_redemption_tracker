@@ -1,0 +1,39 @@
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# Logs
+logs/
+*.log
+
+# IDEs and other tools
+.idea/
+.project
+.classpath
+.settings/
+*.iml
+.vscode/
+
+# OS generated files
+.DS_Store
+thumbs.db
+
+# Spring Boot specific
+*.env
+*.env.development.local
+*.env.test.local
+*.env.production.local
+*.env.local
+/src/main/resources/application*.properties
+/src/main/resources/application*.yml
+
+# Local data file
+creditcards.json
