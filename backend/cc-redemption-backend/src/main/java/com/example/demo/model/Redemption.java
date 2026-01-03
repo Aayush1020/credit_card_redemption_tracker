@@ -14,6 +14,7 @@ public class Redemption {
     private Frequency frequency;
     private boolean checked;
     private java.time.LocalDate lastCheckedDate;
+    private java.util.Set<String> completedPeriodsThisYear = new java.util.HashSet<>();
 
     public enum Frequency {
         MONTHLY,

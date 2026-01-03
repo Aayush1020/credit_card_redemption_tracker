@@ -73,4 +73,9 @@ public class CreditCardController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
+    @GetMapping("/reimbursements/current-year-total")
+    public double getCurrentYearReimbursementTotal() {
+        return creditCardService.getCurrentYearReimbursementTotal();
+    }
 }

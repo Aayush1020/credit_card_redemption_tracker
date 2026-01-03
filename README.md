@@ -13,10 +13,14 @@ This is a local web application designed to help you track credit card reward re
     -   A checkbox to mark it as completed.
 -   **Check Off Redemptions:** Mark redemptions as complete when you've done them.
 -   **Auto-Reset Behavior:** Redemptions automatically reset (uncheck) based on their configured frequency. This logic runs **both every time the backend application starts up** (to catch up on any missed resets) **and nightly at midnight** (if the application is left running).
-    -   **MONTHLY:** Resets if the current month is after the month it was last checked.
-    -   **QUARTERLY:** Resets if the current quarter is after the quarter it was last checked.
-    -   **BIANNUAL:** Resets if the current half-year (Jan-Jun or Jul-Dec) is after the half-year it was last checked.
-    -   **YEARLY:** Resets if the current year is after the year it was last checked.
+    -   When a new year begins, the system will save a summary of the total reimbursements for each card from the *previous year* before clearing the current year's tracking. This allows you to review past performance per card.
+    -   **MONTHLY:** Resets if the current month is after the month it was last checked, and clears its current month's completion record.
+    -   **QUARTERLY:** Resets if the current quarter is after the quarter it was last checked, and clears its current quarter's completion record.
+    -   **BIANNUAL:** Resets if the current half-year (Jan-Jun or Jul-Dec) is after the half-year it was last checked, and clears its current half-year's completion record.
+    -   **YEARLY:** Resets if the current year is after the year it was last checked, and clears its current year's completion record.
+-   **Yearly Reimbursement Tracking:**
+    -   **Overall Total:** A dynamically calculated "Total Reimbursements This Year" is displayed at the top of the application, reflecting all reimbursements across all cards for the current calendar year.
+    -   **Per-Card Total:** Each credit card's expanded view now displays its "Current Year Total", showing the sum of all its redemptions completed within the current year.
 -   **Data Persistence:** All credit card and redemption data is stored locally in a `creditcards.json` file, so your data persists between sessions.
 -   **Clean UI:** The frontend provides a simple, card-based layout for easy navigation and interaction.
 

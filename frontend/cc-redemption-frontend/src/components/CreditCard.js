@@ -23,6 +23,7 @@ function CreditCard({ card, onAddRedemption, onToggleRedemption, onDeleteRedempt
       </h2>
       {isExpanded && (
         <div className="redemptions-list">
+          <h4>Current Year Total: ${card.currentYearTotal ? card.currentYearTotal.toFixed(2) : '0.00'}</h4>
           <h3>Redemptions:</h3>
           {card.redemptions && card.redemptions.map(redemption => (
             <RedemptionItem
